@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        button {
+            background-color: red;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 50px;
+            width: 100px;
+        }
+
+        .info-div {
+            background-color: brown;
+            display: none;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            height: 200px;
+            width: 200px;
+        }
+
+        button:active + .info-div {
+            display: block;
+        }
+
+        button:active {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button id="toggleButton">Read Info</button>
+        <div class="info-div">
+            <h1>This is the info</h1>
+        </div>
+    </div>
+</body>
+</html>
